@@ -1,8 +1,8 @@
 /*
 COLORS
-Primary: #29323C
-Primary light: #3C444D
-Primary dark: #1E252C
+Primary: #2066F0
+Primary light: #6695CA
+Primary dark: #202226
 Grey light 1: #faf9f9
 Grey light 2: #f4f2f2
 Grey light 3: #f0eeee
@@ -13,9 +13,9 @@ Grey dark 3: #999
 */
 
 :root {
-  --color-primary: #29323c;
-  --color-primary-light: #3c444d;
-  --color-primary-dark: #1e252c;
+  --color-primary: #2066f0;
+  --color-primary-light: #6695ca;
+  --color-primary-dark: #202226;
 
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -27,7 +27,7 @@ Grey dark 3: #999
   --color-grey-dark-3: #999;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
 
   --line: 1px solid var(--color-grey-light-2);
 }
@@ -65,9 +65,9 @@ body {
   line-height: 1.6;
   color: var(--color-grey-dark-2);
   background-image: linear-gradient(
-    to right bottom,
-    var(--color-primary-light),
-    var(--color-primary-dark)
+    to bottom right,
+    var(--color-grey-light-2),
+    var(--color-grey-light-2)
   );
   background-size: cover;
   background-repeat: no-repeat;
