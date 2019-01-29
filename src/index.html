@@ -12,6 +12,10 @@
       href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
+      rel="stylesheet"
+    />
 
     <title>Movie Library</title>
   </head>
@@ -39,7 +43,80 @@
       </nav>
     </header>
     <div class="container">
-      <h1 class="results">Search results for "Home alone"</h1>
+      <!-- SINGLE PAGE -->
+      <div class="container__single">
+        <div class="container__single__img">
+          <img
+            class="img__single"
+            src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
+            alt=""
+          />
+        </div>
+        <div class="container__single__details">
+          <h1 class="container__single__details-name">Blade Runner</h1>
+          <div class="container__single__details-details">
+            <div class="details-year">
+              <i class="icon ion-ios-calendar"></i> 1995
+            </div>
+            <div class="details-rating">
+              <i class="icon ion-ios-star"></i> 8,6
+            </div>
+            <div class="details-time">
+              <i class="icon ion-ios-time"></i> 195 min.
+            </div>
+          </div>
+          <div class="container__single__details-plot">
+            It is Christmas time and the McCallister family is preparing for a
+            vacation in Paris, France. But the youngest in the family named
+            Kevin got into a scuffle with his older brother Buzz and was sent to
+            his room which is on the third floor of his house. Then, the next
+            morning, while the rest of the family was in a rush to make it to
+            the airport on time, they completely forgot about Kevin who now has
+            the house all to himself. Being home alone was fun for Kevin, having
+            a pizza all to himself, jumping on his parents' bed, and making a
+            mess. Then, Kevin discovers about two burglars, Harry and Marv,
+            about to rob his house on Christmas Eve. Kevin acts quickly by
+            wiring his own house with makeshift booby traps to stop the burglars
+            and to bring them to justice.
+          </div>
+          <div class="container__single__details-rating">
+            <div class="details__imdb">
+              <i class="icon ion-ios-star"></i> 8,6
+            </div>
+            <div class="details__actions">
+              <button class="details__actions-later">
+                <i class="icon ion-ios-checkmark-circle-outline"></i>
+              </button>
+              <button class="details__actions-favorite">
+                <i class="icon ion-ios-heart-empty"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LOADER-->
+      <!-- <div class="loader">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div> -->
+      <!-- HOME -->
+      <!-- <div class="container__home">
+        <div class="container__home-left">
+          <img src="./img/undraw_movie_night_93wl.svg" alt="Movie Library" />
+        </div>
+        <div class="container__home-right">
+          <h1 class="container__home-title">Movie Library</h1>
+          <p class="container__home-text">
+            ⌨️ Write the name of the movie on the search bar
+          </p>
+          <p class="container__home-text">➡️ Press enter or the search icon</p>
+          <p class="container__home-text">🔥 Enjoy</p>
+        </div>
+      </div>  -->
+      <!-- MOVIES SEARCH VIEW -->
+      <!-- <h1 class="results">Search results for "Home alone"</h1>
       <div class="container__movies">
         <div class="movie">
           <img
@@ -151,7 +228,7 @@
             <h1 class="movie__name">Home Alone</h1>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>

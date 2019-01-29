@@ -89,7 +89,50 @@
 .container {
   padding: 7rem 6em;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 7rem);
+}
+
+.container__home {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    padding: 4rem;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 7rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+  }
+
+  &-text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  &-left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 80%;
+    }
+  }
+
+  &-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .results {
@@ -159,5 +202,99 @@
       visibility: visible;
       transform: translateY(0rem);
     }
+  }
+}
+
+.container__single {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  & > * {
+    padding: 3rem;
+    flex: 1;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 70vh;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    &-name {
+      color: var(--color-primary);
+      font-weight: 100;
+      font-size: 4rem;
+    }
+
+    &-details {
+      display: flex;
+
+      & > *:not(:last-child) {
+        margin-right: 3rem;
+      }
+
+      & > [class^='icon'] {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+/* LOADER */
+
+.loader {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  animation: expand 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 10px;
+  width: 10px;
+  height: 5rem;
+}
+
+.line:nth-child(1) {
+  background: var(--color-primary);
+}
+
+.line:nth-child(2) {
+  animation-delay: 180ms;
+  background: var(--color-primary-light);
+}
+
+.line:nth-child(3) {
+  animation-delay: 360ms;
+  background: var(--color-primary);
+}
+
+.line:nth-child(4) {
+  animation-delay: 540ms;
+  background: var(--color-primary-light);
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
   }
 }
