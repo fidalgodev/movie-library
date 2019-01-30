@@ -22,7 +22,8 @@
   <body>
     <header class="header">
       <div class="logo">
-        <i class="icon ion-ios-play-circle"></i>Movie Library
+        <i class="icon ion-ios-play-circle"></i>
+        <span class="logo__title">Movie Library</span>
       </div>
       <form action="#" class="search">
         <button class="search__button">
@@ -38,132 +39,237 @@
       <nav class="menu">
         <div class="menu__viewed">
           <i class="icon ion-ios-checkmark-circle"></i>
+          <div class="menu__viewed__panel">
+            <!-- <a href="#" class="movie__item__panel">
+              <div class="movie__item__panel__div">
+                <img
+                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
+                  class="movie__item__panel__img"
+                />
+                <h1 class="movie__item__panel__title">Home Alone</h1>
+              </div>
+            </a>
+            <a href="#" class="movie__item__panel">
+              <div class="movie__item__panel__div">
+                <img
+                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
+                  class="movie__item__panel__img"
+                />
+                <h1 class="movie__item__panel__title">Home Alone</h1>
+              </div>
+            </a> -->
+          </div>
         </div>
-        <div class="menu__favorite"><i class="icon ion-ios-heart"></i></div>
+        <div class="menu__favorite">
+          <i class="icon ion-ios-heart"></i>
+          <div class="menu__favorite__panel">
+            <!-- <a href="#" class="movie__item__panel">
+              <div class="movie__item__panel__div">
+                <img
+                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
+                  class="movie__item__panel__img"
+                />
+                <h1 class="movie__item__panel__title">Home Alone</h1>
+              </div>
+            </a> -->
+          </div>
+        </div>
       </nav>
     </header>
     <div class="container">
-      <div class="container__home">
-        <div class="container__home-left">
-          <img src="./img/undraw_movie_night_93wl.svg" alt="Movie Library" />
-        </div>
-        <div class="container__home-right"></div>
-      </div>
-      <!-- MOVIES SEARCH VIEW -->
-      <!-- <h1 class="results">Search results for "Home alone"</h1>
-      <div class="container__movies">
-        <div class="movie">
+      <!-- SINGLE PAGE -->
+      <div class="container__single">
+        <div class="container__single__img">
           <img
-            class="movie__img"
+            class="img__single"
             src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
             alt=""
           />
-          <div class="movie__details">
-            <h1 class="movie__name">Blade Runner</h1>
+        </div>
+        <div class="container__single__details">
+          <h1 class="container__single__details-name">Blade Runner</h1>
+          <div class="container__single__details-details">
+            <div class="details-year" title="Release Date">
+              <i class="icon ion-ios-calendar"></i> 1995
+            </div>
+            <div class="details-director" title="Movie Director">
+              <i class="icon ion-ios-person"></i> Tim Miller
+            </div>
+            <div class="details-time" title="Total time">
+              <i class="icon ion-ios-time"></i> 195 min.
+            </div>
+            <div class="details-rating" title="Internet Movie Database Value">
+              <i class="icon ion-ios-star"></i> 8.0/10
+            </div>
+          </div>
+          <div class="container__single__details-plot">
+            It is Christmas time and the McCallister family is preparing for a
+            vacation in Paris, France. But the youngest in the family named
+            Kevin got into a scuffle with his older brother Buzz and was sent to
+            his room which is on the third floor of his house. Then, the next
+            morning, while the rest of the family was in a rush to make it to
+            the airport on time, they completely forgot about Kevin who now has
+            the house all to himself. Being home alone was fun for Kevin, having
+            a pizza all to himself, jumping on his parents' bed, and making a
+            mess. Then, Kevin discovers about two burglars, Harry and Marv,
+            about to rob his house on Christmas Eve. Kevin acts quickly by
+            wiring his own house with makeshift booby traps to stop the burglars
+            and to bring them to justice.
+          </div>
+          <div class="container__single__buttons">
+            <a href="#" title="IMDB" class="button details__imdb">
+              IMDB <span class="imdb__score">8,6</span>
+            </a>
+            <button class="button details__actions-later">
+              <i class="icon ion-ios-checkmark-circle-outline"></i>
+            </button>
+            <button class="button details__actions-favorite">
+              <i class="icon ion-ios-heart-empty"></i>
+            </button>
+          </div>
+          <button class="button details__go-back">
+            <i class="icon ion-ios-arrow-round-back"></i>BACK
+          </button>
+        </div>
+      </div>
+
+      <!-- LOADER-->
+      <!-- <div class="loader">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div> -->
+
+      <!-- HOME -->
+      <!-- <div class="container__home">
+        <div class="container__home-left">
+          <img src="./img/undraw_movie_night_93wl.svg" alt="Movie Library" />
+        </div>
+        <div class="container__home-right">
+          <h1 class="container__home-title">Movie Library</h1>
+          <p class="container__home-text">
+            ⌨️ Write the name of the movie on the search bar
+          </p>
+          <p class="container__home-text">➡️ Press enter or the search icon</p>
+          <p class="container__home-text">🔥 Enjoy</p>
+        </div>
+      </div> -->
+
+      <!-- MOVIES SEARCH VIEW -->
+      <!-- <div class="container__search">
+        <h1 class="results">Search results for "Home alone"</h1>
+        <div class="container__movies">
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Blade Runner</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://cdn.shopify.com/s/files/1/0969/9128/products/Art_Poster_-_Sicario_-_Tallenge_Hollywood_Collection_47b4ca39-2fb6-45a2-9e85-d9ef34016e8a.jpg?v=1505078993"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://images-na.ssl-images-amazon.com/images/I/51poKKV63GL.jpg"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="http://cafmp.com/wp-content/uploads/2012/11/Avatar-608x900.jpg"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKYsL-HsONvskWHVxg3YgwYKgp6aPzEOdench8tCnSxiBOpO1"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
+          </div>
+          <div class="movie">
+            <img
+              class="movie__img"
+              src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
+              alt=""
+            />
+            <div class="movie__details">
+              <h1 class="movie__name">Home Alone</h1>
+            </div>
           </div>
         </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://cdn.shopify.com/s/files/1/0969/9128/products/Art_Poster_-_Sicario_-_Tallenge_Hollywood_Collection_47b4ca39-2fb6-45a2-9e85-d9ef34016e8a.jpg?v=1505078993"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://images-na.ssl-images-amazon.com/images/I/51poKKV63GL.jpg"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="http://cafmp.com/wp-content/uploads/2012/11/Avatar-608x900.jpg"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUKYsL-HsONvskWHVxg3YgwYKgp6aPzEOdench8tCnSxiBOpO1"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
-        </div>
-        <div class="movie">
-          <img
-            class="movie__img"
-            src="https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jp"
-            alt=""
-          />
-          <div class="movie__details">
-            <h1 class="movie__name">Home Alone</h1>
-          </div>
+        <div class="movies__pagination">
+          <button class="button details__go-back">
+            <i class="icon ion-ios-arrow-round-back"></i>Page 1
+          </button>
+          <button class="button details__go-next">
+            <i class="icon ion-ios-arrow-round-forward"></i>Page 3
+          </button>
         </div>
       </div> -->
     </div>
-    <script type="text/javascript" src="js/bundle.js"></script>
-  </body>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
 </html>
