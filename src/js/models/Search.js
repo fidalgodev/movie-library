@@ -19,6 +19,7 @@ export default class Search {
       );
       // Save the data on the object
       this.result = res.data;
+      this.page = page;
     } catch (error) {
       console.log(error);
     }

@@ -344,8 +344,8 @@
 
 .container__movies {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+  justify-content: center;
   align-content: space-between;
   grid-gap: 6rem 4rem;
   margin-bottom: 4rem;
@@ -357,19 +357,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-content: center;
   cursor: pointer;
   transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
   &__img {
+    display: flex;
     max-width: 100%;
     position: relative;
     height: 40vh;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow-dark);
     border-radius: 1px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #38375a;
 
     @media only screen and (max-width: $bp-largest) {
       height: 44vh;
@@ -385,6 +389,28 @@
 
     @media only screen and (max-width: $bp-smallest) {
       height: 100vw;
+    }
+
+    .emoji {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    span {
+      font-size: 5rem;
+    }
+  }
+
+  &__name {
+    &__noimg {
+      text-align: center;
+      font-weight: 100;
+      font-size: 2rem;
+      padding: 2rem;
     }
   }
 
@@ -406,8 +432,8 @@
 
   &__name {
     color: #fff;
-    font-weight: 700;
-    font-size: 1.7rem;
+    font-weight: 300;
+    font-size: 1.4rem;
   }
 
   &:hover {
@@ -623,8 +649,15 @@
 }
 
 .movies__pagination {
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
   .button {
     font-weight: 300;
     font-size: 1.5rem;
@@ -653,12 +686,15 @@
   }
 
   .details__go-back {
+    float: left;
     i {
       margin-right: 10px;
     }
   }
 
   .details__go-next {
+    float: right;
+    display: flex;
     flex-direction: row-reverse;
     i {
       margin-left: 10px;
@@ -699,6 +735,20 @@ a {
     box-shadow: var(--shadow-dark);
     transform: translateY(2px);
   }
+}
+
+.to-top {
+  align-items: flex-start;
+}
+
+.center {
+  display: flex;
+  padding: 4rem;
+}
+
+.no__found {
+  max-height: 55vh;
+  max-width: 100%;
 }
 
 /* LOADER */
