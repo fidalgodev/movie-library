@@ -1,6 +1,6 @@
 import Search from './models/Search';
 import * as searchView from './views/searchView';
-import { elements, renderLoader, clearLoader } from './views/base';
+import { elements, renderLoader, clearLoader, renderHome } from './views/base';
 
 require('../css/main.scss');
 
@@ -78,5 +78,14 @@ elements.mainContainer.addEventListener('click', e => {
   if (button) {
     const page = parseInt(button.dataset.page, 10);
     searchController('used', page);
+  }
+});
+
+// Event listener for logo
+elements.logo.addEventListener('click', e => {
+  if (e.target.matches('.logo, .logo *')) {
+    searchView.clearInput();
+    searchView.clearSearch();
+    renderHome();
   }
 });
