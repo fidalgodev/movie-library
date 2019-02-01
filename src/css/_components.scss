@@ -462,6 +462,7 @@
   justify-content: center;
   max-width: 140rem;
   margin: 0 auto;
+  padding: 3rem;
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
@@ -469,8 +470,8 @@
   }
 
   & > * {
-    padding: 2rem;
     flex: 1;
+    padding: 2rem;
   }
 
   &__img {
@@ -587,7 +588,7 @@
 
   &__buttons {
     display: flex;
-    align-items: center;
+    width: 100%;
     margin-top: 4rem;
     font-weight: 300;
     font-size: 1.5rem;

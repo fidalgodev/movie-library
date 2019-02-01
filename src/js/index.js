@@ -108,6 +108,7 @@ elements.Form.addEventListener('submit', e => {
 elements.mainContainer.addEventListener('click', e => {
   const button = e.target.closest('.button__pagination');
   const movie = e.target.closest('.movie');
+  const back = e.target.closest('.details__go-back');
   if (button) {
     console.log(button);
     const page = parseInt(button.dataset.page, 10);
@@ -117,6 +118,9 @@ elements.mainContainer.addEventListener('click', e => {
     const movieID = movie.dataset.id;
     // Call movie controller
     movieController(movieID);
+  }
+  if (back) {
+    searchController('used', state.search.page);
   }
 });
 

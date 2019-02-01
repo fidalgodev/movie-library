@@ -13,7 +13,7 @@ export const renderMovie = movie => {
                 <i class="icon ion-ios-calendar"></i>${
                   movie.release === 'N/A' || !movie.release
                     ? 'Unavaiable'
-                    : 'movie.release'
+                    : movie.release
                 }
               </div>
               <div class="details-director" title="Movie Director">
@@ -79,14 +79,14 @@ export const renderMovie = movie => {
             alt="${movie.title}"
           />
           </div>
-          <div class="container__single__details container__single">
+          <div class="container__single__details">
             <h1 class="container__single__details-name">${movie.title}</h1>
             <div class="container__single__details-details">
               <div class="details-year" title="Release Date">
                 <i class="icon ion-ios-calendar"></i>${
                   movie.release === 'N/A' || !movie.release
                     ? 'Unavaiable'
-                    : 'movie.release'
+                    : movie.release
                 }
               </div>
               <div class="details-director" title="Movie Director">
