@@ -475,6 +475,7 @@
 
   &__img {
     display: flex;
+    flex: 1 1 40%;
     justify-content: center;
 
     @media only screen and (max-width: $bp-large) {
@@ -508,9 +509,9 @@
 
   &__details {
     display: flex;
+    flex: 1 1 60%;
     flex-direction: column;
     align-self: stretch;
-    margin-top: 2rem;
 
     @media only screen and (max-width: $bp-largest) {
       margin-top: 0rem;
@@ -518,7 +519,6 @@
 
     @media only screen and (max-width: $bp-large) {
       flex: 1 1 60%;
-      margin-top: 0rem;
       padding: 4rem;
     }
 
@@ -587,7 +587,7 @@
     margin-top: 4rem;
     font-weight: 300;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     @media only screen and (max-width: $bp-small) {
       flex-wrap: wrap;
@@ -630,13 +630,14 @@
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 1;
-    margin-top: auto;
-    margin-bottom: 2rem;
     align-self: flex-start;
     padding: 1.5rem 3rem;
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium) {
       width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
       margin-bottom: 2rem;
       padding: 1rem 3rem;
     }

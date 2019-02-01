@@ -1,6 +1,14 @@
 import Search from './models/Search';
+import Movie from './models/Movie';
 import * as searchView from './views/searchView';
-import { elements, renderLoader, clearLoader, renderHome } from './views/base';
+import * as movieView from './views/movieView';
+import {
+  elements,
+  renderLoader,
+  clearLoader,
+  renderHome,
+  clearUI,
+} from './views/base';
 
 require('../css/main.scss');
 
@@ -29,7 +37,7 @@ const searchController = async (type, page) => {
 
       // Prepare UI for results
       searchView.clearInput();
-      searchView.clearSearch();
+      clearUI();
       renderLoader();
 
       try {
@@ -47,7 +55,7 @@ const searchController = async (type, page) => {
   } else if (type === 'used') {
     // Prepare UI for results
     searchView.clearInput();
-    searchView.clearSearch();
+    clearUI();
     renderLoader();
 
     try {
@@ -64,6 +72,30 @@ const searchController = async (type, page) => {
   }
 };
 
+// ------ MOVIE CONTROLLER ------
+// async function that will get the ID of the movie to get
+const movieController = async id => {
+  if (id) {
+    // Create the movie object and add it to the state
+    state.movie = new Movie(id);
+
+    // Prepare UI for results
+    clearUI();
+    renderLoader();
+
+    try {
+      // Search for the movie
+      await state.movie.getMovie();
+
+      // Render movie on page
+      clearLoader();
+      movieView.renderMovie(state.movie);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+};
+
 // ------ EVENT LISTENERS ------
 
 // Event listener on the form submit for search
@@ -75,9 +107,16 @@ elements.Form.addEventListener('submit', e => {
 // Event listeners on the container that are placed by js
 elements.mainContainer.addEventListener('click', e => {
   const button = e.target.closest('.button__pagination');
+  const movie = e.target.closest('.movie');
   if (button) {
+    console.log(button);
     const page = parseInt(button.dataset.page, 10);
     searchController('used', page);
+  }
+  if (movie) {
+    const movieID = movie.dataset.id;
+    // Call movie controller
+    movieController(movieID);
   }
 });
 
@@ -85,7 +124,7 @@ elements.mainContainer.addEventListener('click', e => {
 elements.logo.addEventListener('click', e => {
   if (e.target.matches('.logo, .logo *')) {
     searchView.clearInput();
-    searchView.clearSearch();
+    clearUI();
     renderHome();
   }
 });

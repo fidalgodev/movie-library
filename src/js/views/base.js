@@ -24,6 +24,11 @@ export const clearLoader = () => {
   elements.mainContainer.innerHTML = '';
 };
 
+// Clear UI
+export const clearUI = () => {
+  elements.mainContainer.innerHTML = '';
+};
+
 // Home
 export const renderHome = () => {
   const markup = `

@@ -58,7 +58,7 @@ const renderMovie = movie => {
       <div class="emoji">No image<span>💩</span></div></div>`
       : `<img class="movie__img" src="${movie.Poster}" alt="${movie.Title}"/>`;
   const markup = `
-  <div class="movie">
+  <div class="movie" data-id="${movie.imdbID}">
    ${img}
     <div class="movie__details">
       <h1 class="movie__name">${movie.Title}</h1>
@@ -74,11 +74,6 @@ export const getInput = () => elements.inputForm.value;
 // Clear input field
 export const clearInput = () => {
   elements.inputForm.value = '';
-};
-
-// Clear previous search from UI
-export const clearSearch = () => {
-  elements.mainContainer.innerHTML = '';
 };
 
 // Render movie search results on page, receives an array
