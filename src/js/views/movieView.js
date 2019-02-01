@@ -1,7 +1,7 @@
 import { elements } from './base';
 
 // Render single movie function
-export const renderMovie = movie => {
+export const renderMovie = (movie, isFavorite, isWatched) => {
   if (movie) {
     let markup;
     if (movie.img === 'N/A') {
@@ -58,10 +58,15 @@ export const renderMovie = movie => {
                 }
               </a>
               <button class="button details__actions-later">
-                <i class="icon ion-ios-checkmark-circle-outline"></i>
+                <i class="icon icon__watched ${
+                  isWatched ? 'ion-ios-checkmark-circle' : 'ion-ios-checkmark'
+                }"></i>
               </button>
               <button class="button details__actions-favorite">
-                <i class="icon ion-ios-heart-empty"></i>
+                <i class="icon icon__favorite ${
+                  isFavorite ? 'ion-ios-heart' : 'ion-ios-heart-empty'
+                }"></i>
+              </button>
               </button>
             </div>
             <button class="button details__go-back">
@@ -131,10 +136,14 @@ export const renderMovie = movie => {
                 }
               </a>
               <button class="button details__actions-later">
-                <i class="icon ion-ios-checkmark-circle-outline"></i>
+                <i class="icon icon__watched ${
+                  isWatched ? 'ion-ios-checkmark-circle' : 'ion-ios-checkmark'
+                }"></i>
               </button>
               <button class="button details__actions-favorite">
-                <i class="icon ion-ios-heart-empty"></i>
+                <i class="icon icon__favorite ${
+                  isFavorite ? 'ion-ios-heart' : 'ion-ios-heart-empty'
+                }"></i>
               </button>
             </div>
             <button class="button details__go-back">

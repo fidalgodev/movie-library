@@ -4,6 +4,10 @@ export const elements = {
   inputForm: document.querySelector('.search__input'),
   mainContainer: document.querySelector('.container'),
   logo: document.querySelector('.logo'),
+  favoritesMenu: document.querySelector('.menu__favorite'),
+  favoritesPanel: document.querySelector('.menu__favorite__panel'),
+  watchedMenu: document.querySelector('.menu__viewed'),
+  watchedMenuPanel: document.querySelector('.menu__viewed__panel'),
 };
 
 // Render the loader

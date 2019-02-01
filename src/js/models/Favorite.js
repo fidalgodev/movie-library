@@ -11,13 +11,24 @@ export default class Favorites {
       img,
       title,
     };
+    // Push to the object
     this.favorites.push(favorite);
+
+    // Update local storage
+    this.savetoLocal();
+
+    return favorite;
   }
 
   // Delete favorite object from array
   deleteFavorite(id) {
-    const index = this.favorites.forEach(element => element.id === id);
+    const index = this.favorites.findIndex(element => element.id === id);
+
+    // Remove from object
     this.favorites.splice(index, 1);
+
+    // Update local storage
+    this.savetoLocal();
   }
 
   // Check if passed id is on favorite array
@@ -28,5 +39,22 @@ export default class Favorites {
   // Check how many favorites exist
   checkIfFavorites() {
     return this.favorites.length;
+  }
+
+  // Save to local storage
+  savetoLocal() {
+    localStorage.setItem(
+      'favoritesmovielibrary',
+      JSON.stringify(this.favorites)
+    );
+  }
+
+  // Read data from local storage
+  readLocal() {
+    // Get data from the local storage
+    const favorites = JSON.parse(localStorage.getItem('favoritesmovielibrary'));
+
+    // If local storage has data, save to the object
+    if (favorites) this.favorites = favorites;
   }
 }
