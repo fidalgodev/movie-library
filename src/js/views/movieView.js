@@ -1,5 +1,6 @@
 import { elements } from './base';
 
+// Render single movie function
 export const renderMovie = movie => {
   if (movie) {
     let markup;

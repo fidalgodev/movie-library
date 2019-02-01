@@ -108,19 +108,30 @@ elements.Form.addEventListener('submit', e => {
 elements.mainContainer.addEventListener('click', e => {
   const button = e.target.closest('.button__pagination');
   const movie = e.target.closest('.movie');
-  const back = e.target.closest('.details__go-back');
+  const back = e.target.matches('.details__go-back');
+  const like = e.target.matches(
+    '.details__actions-favorite, .details__actions-favorite *'
+  );
+  // If pagination button is clicked
   if (button) {
     console.log(button);
     const page = parseInt(button.dataset.page, 10);
     searchController('used', page);
   }
+  // If movie item is clicked
   if (movie) {
     const movieID = movie.dataset.id;
     // Call movie controller
     movieController(movieID);
   }
+  // Is back button is clicked
   if (back) {
+    // Call the search controller and pass in the current page on the state
     searchController('used', state.search.page);
+  }
+  // If like button is clicked
+  if (like) {
+    likeController();
   }
 });
 
