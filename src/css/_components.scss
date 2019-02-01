@@ -507,6 +507,10 @@
     }
   }
 
+  &__noimg {
+    flex: 1 1 80% !important;
+  }
+
   &__details {
     display: flex;
     flex: 1 1 60%;
@@ -599,15 +603,6 @@
     }
   }
 
-  .details__imdb {
-    margin-right: auto;
-
-    @media only screen and (max-width: $bp-small) {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  }
-
   .imdb__score {
     margin-left: 10px;
   }
@@ -647,6 +642,15 @@
       font-weight: 400;
       margin-right: 10px;
     }
+  }
+}
+
+.details__imdb {
+  margin-right: auto;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
