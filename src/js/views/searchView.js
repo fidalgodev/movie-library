@@ -6,7 +6,7 @@ import { elements } from './base';
 // Ex: Call it and I say im on page 1, and that I want to render next page,
 // It will render button with data to page 2
 const createButton = (page, type) => `
-  <button class="button button__pagination details__go-${type}" data-page=${
+  <button class="button button__pagination details__go-${type} animated fadeIn" data-page=${
   type === 'next' ? page + 1 : page - 1
 }>
     <i class="icon ion-ios-arrow-round-${
@@ -58,7 +58,7 @@ const renderMovie = movie => {
       <div class="emoji">No image<span>💩</span></div></div>`
       : `<img class="movie__img" src="${movie.Poster}" alt="${movie.Title}"/>`;
   const markup = `
-  <div class="movie" data-id="${movie.imdbID}">
+  <div class="movie animated fadeIn" data-id="${movie.imdbID}">
    ${img}
     <div class="movie__details">
       <h1 class="movie__name">${movie.Title}</h1>
@@ -82,9 +82,11 @@ export const renderResults = search => {
   if (search.result.Response === 'False') {
     const markup = `
       <div class="container__search">
-        <h1 class="results">There were no results for "${search.query}"</h1>
+        <h1 class="results animated fadeIn faster">There were no results for "${
+          search.query
+        }"</h1>
         <div class="container__movies center">
-        <img src="./img/undraw_empty_xct9.svg" alt="Nothing Found" class="no__found"/>
+        <img src="./img/undraw_empty_xct9.svg" alt="Nothing Found" class="no__found animated fadeIn"/>
         </div>
         <div class="movies__pagination"></div>
   </div>
@@ -93,7 +95,9 @@ export const renderResults = search => {
   } else {
     const markup = `
     <div class="container__search">
-      <h1 class="results">Search results for "${search.query}"</h1>
+      <h1 class="results animated fadeIn faster">Search results for "${
+        search.query
+      }"</h1>
       <div class="container__movies">
       </div>
       <div class="movies__pagination"></div>

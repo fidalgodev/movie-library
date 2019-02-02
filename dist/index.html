@@ -16,16 +16,19 @@
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
     <title>Movie Library</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
+    <header class="header animated fadeInDown faster">
+      <div class="logo animated fadeIn delay-1s">
         <i class="icon ion-ios-play-circle"></i>
         <span class="logo__title">Movie Library</span>
       </div>
-      <form action="#" class="search">
+      <form action="#" class="search animated fadeIn delay-1s">
         <button class="search__button">
           <i class="icon ion-ios-search"></i>
         </button>
@@ -37,48 +40,19 @@
         />
       </form>
       <nav class="menu">
-        <div class="menu__viewed">
+        <div class="menu__viewed animated fadeIn delay-1s">
           <i class="icon ion-ios-checkmark-circle"></i>
-          <div class="menu__viewed__panel">
-            <!-- <a href="#" class="movie__item__panel">
-              <div class="movie__item__panel__div">
-                <img
-                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
-                  class="movie__item__panel__img"
-                />
-                <h1 class="movie__item__panel__title">Home Alone</h1>
-              </div>
-            </a>
-            <a href="#" class="movie__item__panel">
-              <div class="movie__item__panel__div">
-                <img
-                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
-                  class="movie__item__panel__img"
-                />
-                <h1 class="movie__item__panel__title">Home Alone</h1>
-              </div>
-            </a> -->
-          </div>
+          <div class="menu__viewed__panel" id="scroll"></div>
         </div>
-        <div class="menu__favorite">
+        <div class="menu__favorite animated fadeIn delay-1s">
           <i class="icon ion-ios-heart"></i>
-          <div class="menu__favorite__panel">
-            <!-- <a href="#" class="movie__item__panel">
-              <div class="movie__item__panel__div">
-                <img
-                  src="https://www.movieartarena.com/imgs/bladerunner2049ff.jpg"
-                  class="movie__item__panel__img"
-                />
-                <h1 class="movie__item__panel__title">Home Alone</h1>
-              </div>
-            </a> -->
-          </div>
+          <div class="menu__favorite__panel" id="scroll"></div>
         </div>
       </nav>
     </header>
     <div class="container">
       <!-- SINGLE PAGE -->
-      <div class="container__single">
+      <!-- <div class="container__single">
         <div class="container__single__img">
           <img
             class="img__single"
@@ -131,7 +105,7 @@
             <i class="icon ion-ios-arrow-round-back"></i>BACK
           </button>
         </div>
-      </div>
+      </div> -->
 
       <!-- LOADER-->
       <!-- <div class="loader">
