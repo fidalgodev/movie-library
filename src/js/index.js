@@ -24,7 +24,6 @@ require('../css/main.scss');
   - Favorite movies object
 */
 const state = {};
-window.state = state;
 
 // ------ SEARCH CONTROLLER ------
 // Receives type parameter, to know if its a new search from the input search
@@ -78,7 +77,7 @@ const searchController = async (type, page) => {
 
 // ------ MOVIE CONTROLLER ------
 // async function that will get the ID of the movie to get
-const movieController = async id => {
+const movieController = async (id, fromMenu = false) => {
   if (id) {
     // Create the movie object and add it to the state
     state.movie = new Movie(id);
@@ -96,7 +95,8 @@ const movieController = async id => {
       movieView.renderMovie(
         state.movie,
         state.favorites.checkFavorite(id),
-        state.watcheds.checkWatched(id)
+        state.watcheds.checkWatched(id),
+        fromMenu
       );
     } catch (error) {
       console.log(error);
@@ -183,6 +183,9 @@ const watchedController = () => {
 
 // On page load
 window.addEventListener('load', () => {
+  // Render Home
+  renderHome();
+
   // Create favorite and watcheds objects on page load
   state.favorites = new Favorites();
   state.watcheds = new Watcheds();
@@ -262,7 +265,7 @@ elements.favoritesMenu.addEventListener('click', e => {
   if (panel) {
     const movieID = panel.dataset.id;
     // Call movie controller
-    movieController(movieID);
+    movieController(movieID, true);
   }
 });
 
@@ -272,6 +275,6 @@ elements.watchedMenu.addEventListener('click', e => {
   if (panel) {
     const movieID = panel.dataset.id;
     // Call movie controller
-    movieController(movieID);
+    movieController(movieID, true);
   }
 });

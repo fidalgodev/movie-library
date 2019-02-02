@@ -1,13 +1,13 @@
 import { elements } from './base';
 
 // Render single movie function
-export const renderMovie = (movie, isFavorite, isWatched) => {
+export const renderMovie = (movie, isFavorite, isWatched, fromMenu) => {
   if (movie) {
     let markup;
     if (movie.img === 'N/A') {
       markup = `
       <div class="container__single">
-          <div class="container__single__details container__single__noimg">
+          <div class="container__single__details animated fadeIn faster container__single__noimg">
             <h1 class="container__single__details-name">${movie.title}</h1>
             <div class="container__single__details-details">
               <div class="details-year" title="Release Date">
@@ -69,23 +69,27 @@ export const renderMovie = (movie, isFavorite, isWatched) => {
               </button>
               </button>
             </div>
-            <button class="button details__go-back">
-              <i class="icon ion-ios-arrow-round-back"></i>BACK
-            </button>
+            ${
+              fromMenu === true
+                ? ''
+                : `<button class="button details__go-back">
+          <i class="icon ion-ios-arrow-round-back"></i> BACK
+            </button>`
+            }
           </div>
         </div>
       `;
     } else {
       markup = `
         <div class="container__single">
-          <div class="container__single__img">
+          <div class="container__single__img animated fadeIn faster">
           <img
             class="img__single"
             src="${movie.img}"
             alt="${movie.title}"
           />
           </div>
-          <div class="container__single__details">
+          <div class="container__single__details animated fadeIn faster">
             <h1 class="container__single__details-name">${movie.title}</h1>
             <div class="container__single__details-details">
               <div class="details-year" title="Release Date">
@@ -146,9 +150,13 @@ export const renderMovie = (movie, isFavorite, isWatched) => {
                 }"></i>
               </button>
             </div>
-            <button class="button details__go-back">
-              <i class="icon ion-ios-arrow-round-back"></i>BACK
-            </button>
+            ${
+              fromMenu === true
+                ? ''
+                : `<button class="button details__go-back">
+          <i class="icon ion-ios-arrow-round-back"></i> BACK
+            </button>`
+            }
           </div>
         </div>
     `;

@@ -48,4 +48,5 @@ export const removeFavorite = id => {
 export const toggleMenu = favorites => {
   elements.favoritesMenu.style.visibility =
     favorites > 0 ? 'visible' : 'hidden';
+  elements.favoritesMenu.style.opacity = favorites > 0 ? '1' : '0';
 };

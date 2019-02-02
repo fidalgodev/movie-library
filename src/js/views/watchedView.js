@@ -47,4 +47,5 @@ export const removeWatched = id => {
 // Toggle menu if there are watched
 export const toggleMenu = watcheds => {
   elements.watchedMenu.style.visibility = watcheds > 0 ? 'visible' : 'hidden';
+  elements.watchedMenu.style.opacity = watcheds > 0 ? '1' : '0';
 };

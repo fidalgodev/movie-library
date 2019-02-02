@@ -1,6 +1,8 @@
 .header {
   background-color: var(--color-primary-light);
   display: flex;
+  position: relative;
+  z-index: 999;
   height: 7rem;
   justify-content: flex-start;
   color: var(--color-grey-light-3);
@@ -109,6 +111,9 @@
       display: flex;
       align-items: center;
       position: relative;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s;
 
       @media only screen and (max-width: $bp-large) {
         padding: 0 2rem;
@@ -131,6 +136,8 @@
 
       &__panel {
         position: absolute;
+        max-height: 75vh;
+        overflow-y: auto;
         border-radius: 0 0 5px 5px;
         right: 0;
         top: 7rem;
@@ -157,6 +164,8 @@
       &__panel {
         position: absolute;
         border-radius: 0 0 5px 5px;
+        max-height: 75vh;
+        overflow-y: auto;
         right: 0;
         top: 7rem;
         z-index: 999999;
@@ -251,6 +260,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   @media only screen and (max-width: $bp-medium) {
     flex-direction: column;
@@ -461,6 +471,7 @@
   align-items: flex-start;
   justify-content: center;
   max-width: 140rem;
+  width: 100%;
   margin: 0 auto;
   padding: 3rem;
 
