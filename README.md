@@ -21,3 +21,9 @@ npm run build
 npm run start
 ```
 
+#### Create a .env file like:
+
+```shell
+API_KEY=yourapi
+PROXY=https://cors-anywhere.herokuapp.com/
+```
