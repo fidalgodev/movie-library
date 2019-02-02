@@ -36,8 +36,11 @@
         display: none;
       }
     }
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 1.5rem;
+    }
     @media only screen and (max-width: $bp-smallest) {
-      display: none;
+      padding: 1rem 1rem;
     }
   }
 
