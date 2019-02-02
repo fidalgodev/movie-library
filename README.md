@@ -1,5 +1,10 @@
 # movie-library
+
+## Watch it live [here](https://fidalgodev.github.io/movie-library/)
+
 ### Simple movie library using the [OMDb API](http://www.omdbapi.com/)
+
+
 
 Created this from scratch using HTML, CSS and JS Vanilla only.
 
