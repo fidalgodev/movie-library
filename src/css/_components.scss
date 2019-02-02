@@ -251,7 +251,7 @@
   }
 
   @media only screen and (max-width: $bp-small) {
-    padding: 4rem 3em;
+    padding: 2rem 1rem;
   }
 }
 
@@ -478,6 +478,10 @@
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
     align-items: center;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1.5rem;
   }
 
   & > * {
