@@ -559,6 +559,13 @@
       @media only screen and (max-width: $bp-small) {
         flex-wrap: wrap;
       }
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.5rem;
+      }
     }
 
     &-name {
@@ -576,6 +583,14 @@
 
       & > *:not(:last-child) {
         margin-right: 2.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+          margin-right: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+          margin-right: 1.5rem;
+        }
       }
 
       & > * i[class*='icon'] {
